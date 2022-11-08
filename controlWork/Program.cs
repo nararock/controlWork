@@ -1,5 +1,7 @@
 ﻿string[] stringArray = createArray();
 Console.WriteLine(String.Join(",", stringArray));
+string[] newStringArray = fillArrayWithCondition(stringArray, 2);
+Console.WriteLine(String.Join(",", newStringArray));
 
 string[] createArray(){
     Console.WriteLine("Введите размер массива");
@@ -13,3 +15,14 @@ string[] createArray(){
     return array;
 }
 
+string[] fillArrayWithCondition(string[] array, int n){
+    string[] newArray = new string[array.Length];
+    int k = 0;
+    for (int i = 0; i < array.Length; i++){
+        if (array[i].Length == n){
+            newArray[k] = array[i];
+            k++;
+        }            
+    }
+    return newArray;
+}

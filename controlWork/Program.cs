@@ -1,7 +1,9 @@
 ﻿string[] stringArray = createArray();
-Console.WriteLine(String.Join(",", stringArray));
-(string[] newStringArray, int k) = fillArrayWithCondition(stringArray, 2);
-Console.WriteLine(String.Join(",", newStringArray, 0, k));
+Console.Write("Введите размер строк, которые должны войти в новый массив: ");
+int sizeArray = Convert.ToInt32(Console.ReadLine());
+(string[] newStringArray, int k) = fillArrayWithCondition(stringArray, sizeArray);
+Console.WriteLine("Было ["+String.Join(",", stringArray)+"]");
+Console.WriteLine("Стало [" + String.Join(",", newStringArray, 0, k) +"]");
 
 string[] createArray(){
     Console.WriteLine("Введите размер массива");
